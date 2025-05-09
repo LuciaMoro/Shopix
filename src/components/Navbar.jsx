@@ -1,10 +1,13 @@
+import HomePage from "../HomePage";
+import Products from "../Products";
+import Checkout from "../Checkout";
+import { Link } from "react-router";
+
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <a className="navbar-brand" href="#"></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,19 +22,19 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
+              <Link className="nav-link" to="/products">
+                Products
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
+              <Link className="nav-link" to="/checkout">
+                Checkout
+              </Link>
             </li>
           </ul>
           <form className="d-flex" role="search">
