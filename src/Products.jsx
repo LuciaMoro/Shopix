@@ -15,13 +15,12 @@ function Products() {
   }, []);
 
   return (
-    <div>
-      <h2>Products</h2>
-      <ul>
+    <div className="container my-5">
+      <div className="row gy-4">
         {products.map(({ id, title, price }) => (
           <Product key={id} title={title} price={price} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,3 @@
-import HomePage from "../HomePage";
-import Products from "../Products";
-import Checkout from "../Checkout";
 import { Link } from "react-router";
 
 function Navbar() {
