@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CartItem from "../components/cartItem/cartItem";
+import Button from "../components/button/Button";
 
 function Checkout() {
   const [cart, setCart] = useState([]);
@@ -49,25 +50,27 @@ function Checkout() {
       <div className="row">
         <div className="col-10">
           {cart.map(({ id, title, price, image, qty }) => (
-            <CartItem
-              key={id}
-              id={id}
-              title={title}
-              price={price}
-              image={image}
-              qty={qty}
-              increaseQty={increaseQty}
-              decreaseQty={decreaseQty}
-              remove={remove}
-            />
+            <div key={id} className="p-4">
+              <CartItem
+                id={id}
+                title={title}
+                price={price}
+                image={image}
+                qty={qty}
+                increaseQty={increaseQty}
+                decreaseQty={decreaseQty}
+                remove={remove}
+              />
+            </div>
           ))}
         </div>
-        <div className="col-2">
+        <div className="col-2 mt-4">
           <div className="card">
             <div className="card-body">
               <h5 className="card-title">Summary</h5>
               <p>Total:</p>
-              <p>${totalAmount}</p>
+              <h4 className="text-danger">${totalAmount}</h4>
+              <Button>Continue</Button>
             </div>
           </div>
         </div>
