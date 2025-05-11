@@ -1,6 +1,6 @@
 import "./Product.css";
 import Button from "../button/Button";
-function Product({ title, price, image, id }) {
+function Product({ title, price, image, id, brand }) {
   const addToCart = () => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
     const newCart = [...existingCart];
@@ -15,10 +15,19 @@ function Product({ title, price, image, id }) {
   };
   return (
     <div className="col-4">
-      <div className="card product">
-        <div>{title}</div>
-        <div>${price}</div>
-        <img height={100} width={100} src={image} alt="image-product" />
+      <div className="card product p-4 ">
+        <img
+          className="img"
+          height={100}
+          width={100}
+          src={image}
+          alt="image-product"
+        />
+        <div className="card-body">
+          <h5 className="card-title title">{title}</h5>
+          <div>Brand: {brand}</div>
+          <div>${price}</div>
+        </div>
         <Button handleClick={addToCart}>Add to Cart</Button>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import "./Button.css";
+
 function Button({ handleClick, children }) {
   return (
     <button className="btn" onClick={handleClick}>

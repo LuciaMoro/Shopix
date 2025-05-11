@@ -1,3 +1,11 @@
 .product {
   height: 320px;
 }
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.img {
+  align-self: center;
+}

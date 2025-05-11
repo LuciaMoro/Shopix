@@ -13,12 +13,19 @@ function Products() {
   useEffect(() => {
     fetchProducts();
   }, []);
-
+  console.log("products", products);
   return (
     <div className="container my-5">
       <div className="row gy-4">
-        {products.map(({ id, title, price, image }) => (
-          <Product key={id} title={title} price={price} image={image} id={id} />
+        {products.map(({ id, title, price, image, brand }) => (
+          <Product
+            key={id}
+            title={title}
+            price={price}
+            image={image}
+            id={id}
+            brand={brand}
+          />
         ))}
       </div>
     </div>

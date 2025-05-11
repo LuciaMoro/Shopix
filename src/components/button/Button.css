@@ -1,0 +1,8 @@
+.btn {
+  background-color: rgb(171, 136, 204);
+  max-width: fit-content;
+}
+
+.btn:hover {
+  background-color: rgb(221, 196, 246);
+}
