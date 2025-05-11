@@ -1,5 +1,5 @@
-import Header from "./Header";
-import Navbar from "./Navbar";
+import Header from "../header/Header";
+import Navbar from "../navbar/Navbar";
 import { Outlet } from "react-router";
 
 function Layout() {

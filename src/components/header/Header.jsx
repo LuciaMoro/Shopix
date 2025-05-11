@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import Icon from "../assets/logo.png";
+import Icon from "../../assets/logo.png";
 import "./Header.css";
 function Header() {
   return (

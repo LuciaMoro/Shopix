@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Product from "./components/Product";
+import Product from "./components/product/Product";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -17,8 +17,8 @@ function Products() {
   return (
     <div className="container my-5">
       <div className="row gy-4">
-        {products.map(({ id, title, price }) => (
-          <Product key={id} title={title} price={price} />
+        {products.map(({ id, title, price, image }) => (
+          <Product key={id} title={title} price={price} image={image} id={id} />
         ))}
       </div>
     </div>
