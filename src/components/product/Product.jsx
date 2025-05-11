@@ -1,6 +1,9 @@
 import "./Product.css";
 import Button from "../button/Button";
+import { useNavigate } from "react-router";
 function Product({ title, price, image, id, brand }) {
+  const navigate = useNavigate();
+
   const addToCart = () => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
     const newCart = [...existingCart];
@@ -13,9 +16,14 @@ function Product({ title, price, image, id, brand }) {
     }
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
+
+  const handleClick = () => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="col-4">
-      <div className="card product p-4 ">
+      <div className="card product p-4" onClick={handleClick}>
         <img
           className="img"
           height={100}

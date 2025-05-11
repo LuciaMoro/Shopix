@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Product from "./components/product/Product";
+import Product from "../components/product/Product";
 
-function Products() {
+function HomePage() {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
@@ -13,7 +13,6 @@ function Products() {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log("products", products);
   return (
     <div className="container my-5">
       <div className="row gy-4">
@@ -32,4 +31,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default HomePage;

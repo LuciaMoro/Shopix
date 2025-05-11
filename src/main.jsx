@@ -1,8 +1,8 @@
 import { createRoot } from "react-dom/client";
-import HomePage from "./HomePage.jsx";
+import HomePage from "./views/HomePage.jsx";
+import ProductDetails from "./views/ProductDetails.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Products from "./Products.jsx";
-import Checkout from "./Checkout.jsx";
+import Checkout from "./views/Checkout.jsx";
 import Layout from "./components/layout/Layout.jsx";
 
 const router = createBrowserRouter([
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
         Component: HomePage,
       },
       {
-        path: "/products",
-        Component: Products,
+        path: "/product/:id",
+        Component: ProductDetails,
       },
       {
         path: "/checkout",
