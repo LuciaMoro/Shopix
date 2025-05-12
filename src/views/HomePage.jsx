@@ -19,7 +19,6 @@ function HomePage() {
   }, []);
 
   const handleOnChange = (e) => {
-    console.log(e.target);
     setSearchTerm(e.target.value);
     const filtered = products.filter((p) =>
       p.title.toLowerCase().includes(e.target.value)
@@ -56,7 +55,7 @@ function HomePage() {
               />
             ))
           ) : isLoading ? null : (
-            <h4>"We didn't find any products :("</h4>
+            <h4>We didn't find any products :(</h4>
           )}
         </div>
       </div>
