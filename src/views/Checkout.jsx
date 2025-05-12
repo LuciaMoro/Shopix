@@ -9,21 +9,21 @@ function Checkout() {
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem("cart"));
     setCart(cart);
-    calculateAndSetTotalAmount();
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-    calculateAndSetTotalAmount();
-  }, [cart]);
-
-  const calculateAndSetTotalAmount = () => {
     const amount = cart.reduce(
       (acc, curr) => (acc += curr.qty * curr.price),
       0
     );
     setTotalAmount(amount);
-  };
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    const amount = cart.reduce(
+      (acc, curr) => (acc += curr.qty * curr.price),
+      0
+    );
+    setTotalAmount(amount);
+  }, [cart]);
 
   const increaseQty = (id) => {
     const found = cart.findIndex((cartItem) => cartItem.id === id);

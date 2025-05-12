@@ -5,14 +5,16 @@ function ProductDetails() {
   const [product, setProduct] = useState();
   const params = useParams();
 
-  const fetchProductDetails = async (id) => {
-    const response = await fetch(`https://fakestoreapi.in/api/products/${id}`);
-    const data = await response.json();
-    setProduct(data.product);
-  };
   useEffect(() => {
+    const fetchProductDetails = async (id) => {
+      const response = await fetch(
+        `https://fakestoreapi.in/api/products/${id}`
+      );
+      const data = await response.json();
+      setProduct(data.product);
+    };
     fetchProductDetails(params.id);
-  }, []);
+  }, [params]);
 
   const addToCart = () => {
     const { image, title, price, id } = product;

@@ -7,15 +7,14 @@ function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  const fetchProducts = async () => {
-    const response = await fetch("https://fakestoreapi.in/api/products");
-    const data = await response.json();
-    setProducts(data.products);
-    setFilteredProducts(data.products);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch("https://fakestoreapi.in/api/products");
+      const data = await response.json();
+      setProducts(data.products);
+      setFilteredProducts(data.products);
+      setIsLoading(false);
+    };
     fetchProducts();
   }, []);
 
