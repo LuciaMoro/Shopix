@@ -3,18 +3,8 @@ import CartItem from "../components/cartItem/cartItem";
 import Button from "../components/button/Button";
 
 function Checkout() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")));
   const [totalAmount, setTotalAmount] = useState(0);
-
-  useEffect(() => {
-    const cart = JSON.parse(localStorage.getItem("cart"));
-    setCart(cart);
-    const amount = cart.reduce(
-      (acc, curr) => (acc += curr.qty * curr.price),
-      0
-    );
-    setTotalAmount(amount);
-  }, []);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));

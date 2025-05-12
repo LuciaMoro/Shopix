@@ -26,6 +26,7 @@ function HomePage() {
     );
     setFilteredProducts(filtered);
   };
+
   return (
     <div>
       <div className="container mt-4 d-flex justify-content-end align-items-center">
