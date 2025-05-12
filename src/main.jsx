@@ -4,6 +4,7 @@ import ProductDetails from "./views/ProductDetails.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Checkout from "./views/Checkout.jsx";
 import Layout from "./components/layout/Layout.jsx";
+import { StrictMode } from "react";
 
 const router = createBrowserRouter([
   {
@@ -25,5 +26,7 @@ const router = createBrowserRouter([
   },
 ]);
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
 );
