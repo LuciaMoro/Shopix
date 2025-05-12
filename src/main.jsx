@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Checkout from "./views/Checkout.jsx";
 import Layout from "./components/layout/Layout.jsx";
 import { StrictMode } from "react";
+import "./main.css";
 
 const router = createBrowserRouter([
   {

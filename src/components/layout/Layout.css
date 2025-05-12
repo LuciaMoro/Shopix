@@ -1,0 +1,4 @@
+.layout-height {
+  /* calculates the height by taking 100vh and subtracting the heights of header, navbar and footer */
+  height: calc(100vh - 208px);
+}

@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="header">
       <Link to="/" className="logo d-flex align-items-center">
-        <img height={96} width={96} src={Icon} alt="logo" />
+        <img height={96} width={96} src={Icon} alt="logo" className="ms-4" />
         <h1 className="ms-4 title">Shopix</h1>
       </Link>
     </div>

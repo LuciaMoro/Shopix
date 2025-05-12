@@ -32,7 +32,7 @@ function ProductDetails() {
 
   return product ? (
     <>
-      <div className="container my-4">
+      <div className="container">
         <div className="row">
           <div className="col-8 p-4">
             <div className="card shadow">
@@ -44,7 +44,7 @@ function ProductDetails() {
                       <img
                         className="card-img-top"
                         src={product.image}
-                        alt=""
+                        alt="product-image"
                       />
                     </div>
                     <div className="col-6 mt-4 ps-4">
